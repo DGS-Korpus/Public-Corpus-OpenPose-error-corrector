@@ -1,6 +1,6 @@
 # Public Corpus OpenPose error corrector
 
-The [Public DGS Corpus](ling.meine-dgs.de) provides [OpenPose](https://github.com/CMU-Perceptual-Computing-Lab/openpose) data for all of its transcripts. For the total perspective of each transcript, which shows both informants and the moderator, the OpenPose output was postprocessed to make several improvements. This repository contains the code used for these postprocessing steps. 
+The [Public DGS Corpus](http://ling.meine-dgs.de) provides [OpenPose](https://github.com/CMU-Perceptual-Computing-Lab/openpose) data for all of its transcripts. For the total perspective of each transcript, which shows both informants and the moderator, the OpenPose output was postprocessed to make several improvements. This repository contains the code used for these postprocessing steps. 
 
 ## Postprocessing steps
 ### Fix person fragmentation
