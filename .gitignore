@@ -1,0 +1,14 @@
+# OS generated files
+.idea/
+.DS_Store
+
+# Python temp files
+__pycache__/
+.ipynb_checkpoints/
+*.pyc
+
+# Ignores for development
+input_examples
+expected_output
+actual_output
+createPublicCorpusOpenPoseDatasets.py
