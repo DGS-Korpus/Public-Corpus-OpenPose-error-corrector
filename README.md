@@ -1,13 +1,16 @@
 # Public Corpus OpenPose error corrector
 
-The [Public DGS Corpus](http://ling.meine-dgs.de) provides [OpenPose](https://github.com/CMU-Perceptual-Computing-Lab/openpose) data for all of its transcripts. For the total perspective of each transcript, which shows both informants and the moderator, the OpenPose output was postprocessed to make several improvements. This repository contains the code used for these postprocessing steps. 
+The [Public DGS Corpus](http://ling.meine-dgs.de) provides [OpenPose](https://github.com/CMU-Perceptual-Computing-Lab/openpose) data for all of its transcripts. For the total perspective of each transcript, which shows both informants and the moderator, the OpenPose output was postprocessed to make several improvements. This repository contains the code used for these postprocessing steps.
+
+For more information, see the project note [_OpenPose in the Public DGS Corpus_](https://www.sign-lang.uni-hamburg.de/dgs-korpus/arbeitspapiere/AP06-2019-01.html).
+To convert the standard one-frame-per-file output of OpenPose into the single-file wrapper format used here, see the [DGS-Korpus OpenPose wrapper](https://github.com/DGS-Korpus/DGS-Korpus-OpenPose-wrapper) script.
 
 ## Postprocessing steps
 ### Fix person fragmentation
 Fragmentation occurs when one actual person is recognised as several supposed people, e.g. the head and left arm are recognised as one person and the right arm and legs as another. Such fragments are merged together if certain conditions are met:
   1. The fragments are reasonably close to each other;
   2. The keypoints of the fragments are either disjoint sets or they only overlap in the collarbone or hip region.
-  
+
 ### Remove ghosts
 Sometimes OpenPose recognises a person where there is none. We identify and remove such ghosts. This process relies in part on our knowledge of the studio setup of the Public DGS Corpus.
 
@@ -21,7 +24,7 @@ The Public DGS Corpus releases pose information only for informants. The pose in
 
 
 ## Applicability to other OpenPose data
-Some parts of the script rely on information specific to the Public DGS Corpus recording environment, such as the number and usual position of people. However most steps, such as the de-fragmentation and most parts of the cross-frame tracking logic, are environment-agnostic. 
+Some parts of the script rely on information specific to the Public DGS Corpus [recording environment](https://www.sign-lang.uni-hamburg.de/dgs-korpus/files/inhalt_pdf/Hanke_et_al_2010_Studio.pdf), such as the number and usual position of people. However most steps, such as the de-fragmentation and most parts of the cross-frame tracking logic, are environment-agnostic.
 
 
 ## Requirements
@@ -38,7 +41,7 @@ correct_openpose_errors.py [-h] [--publishmoderator] INPUT OUTPUT
 ```
 
 __Positional arguments:__
- * `INPUT`: JSON file structured in the [Public DGS Corpus OpenPose wrapper format](https://doi.org/10.25592/uhhfdm.842).
+ * `INPUT`: JSON file structured in the _Public DGS Corpus OpenPose wrapper format_ (see [wrapper script](https://github.com/DGS-Korpus/DGS-Korpus-OpenPose-wrapper)).
  * `OUTPUT`: Filename for the corrected JSON file.
 
 __Optional arguments:__
