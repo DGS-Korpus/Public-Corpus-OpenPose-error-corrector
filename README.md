@@ -33,12 +33,14 @@ Tested on Python 3.7.7 with Numpy 1.18.1
 
 
 ## Usage
-> correct_openpose_errors.py [-h] [--publishmoderator] INPUT OUTPUT
+```sh
+correct_openpose_errors.py [-h] [--publishmoderator] INPUT OUTPUT
+```
 
 __Positional arguments:__
- * INPUT: JSON file structured in the [Public DGS Corpus OpenPose wrapper format](https://doi.org/10.25592/uhhfdm.842).
- * OUTPUT: Filename for the corrected JSON file.
+ * `INPUT`: JSON file structured in the [Public DGS Corpus OpenPose wrapper format](https://doi.org/10.25592/uhhfdm.842).
+ * `OUTPUT`: Filename for the corrected JSON file.
 
 __Optional arguments:__
- * -h, --help: show this help message and exit.
- * -m --publishmoderator: Also include moderator data in the output.
+ * `-h`, `--help`: show this help message and exit.
+ * `-m`, `--publishmoderator`: Also include moderator data in the output.
