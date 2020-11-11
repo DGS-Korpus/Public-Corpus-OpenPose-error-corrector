@@ -1,3 +1,7 @@
+__Latest release:__ [![DOI](https://www.fdr.uni-hamburg.de/badge/DOI/10.25592/uhhfdm.8239.svg)](https://doi.org/10.25592/uhhfdm.8239)
+
+__This release:__ See [release description](https://github.com/DGS-Korpus/Public-Corpus-OpenPose-error-corrector/releases/tag/v1.0.0).
+
 # Public Corpus OpenPose error corrector
 
 The [Public DGS Corpus](http://ling.meine-dgs.de) provides [OpenPose](https://github.com/CMU-Perceptual-Computing-Lab/openpose) data for all of its transcripts. For the total perspective of each transcript, which shows both informants and the moderator, the OpenPose output was postprocessed to make several improvements. This repository contains the code used for these postprocessing steps.
